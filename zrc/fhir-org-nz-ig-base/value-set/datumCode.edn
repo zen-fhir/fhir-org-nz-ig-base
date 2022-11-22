@@ -1,0 +1,17 @@
+{ns fhir-org-nz-ig-base.value-set.datumCode,
+ import #{zen.fhir},
+ value-set
+ {:zen/tags #{zen.fhir/value-set},
+  :zen/desc "Datum codes used",
+  :zen.fhir/version "0.6.1",
+  :fhir/code-systems
+  #{{:fhir/url "https://standards.digital.health.nz/ns/nz-datum-code",
+     :zen.fhir/content :bundled}},
+  :uri "https://nzhts.digital.health.nz/fhir/ValueSet/nz-datum-code",
+  :version "2.0.0",
+  :ftr
+  {:module "ig",
+   :source-urls ["node_modules/fhir.org.nz.ig.base"],
+   :source-type :igs,
+   :ftr-path "ftr",
+   :tag "init"}}}

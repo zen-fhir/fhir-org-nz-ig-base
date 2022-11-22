@@ -1,0 +1,81 @@
+{ns fhir-org-nz-ig-base.NzPractitioner,
+ import
+ #{fhir-org-nz-ig-base.registration-initial-date
+   hl7-fhir-r4-core.BackboneElement
+   zen.fhir
+   fhir-org-nz-ig-base.condition-on-practice
+   fhir-org-nz-ig-base.scope-of-practice
+   fhir-org-nz-ig-base.educational-qualification
+   fhir-org-nz-ig-base.nz-ethnicity
+   fhir-org-nz-ig-base.nz-iwi
+   fhir-org-nz-ig-base.death-date
+   fhir-org-nz-ig-base.additional-authorisation
+   hl7-fhir-r4-core.Practitioner
+   fhir-org-nz-ig-base.registration-status-code},
+ schema
+ {:zen/tags #{zen.fhir/profile-schema zen/schema},
+  :zen/desc "Practitioner resource for use in NZ",
+  :zen.fhir/type "Practitioner",
+  :zen.fhir/profileUri
+  "http://hl7.org.nz/fhir/StructureDefinition/NzPractitioner",
+  :zen.fhir/version "0.6.1",
+  :confirms #{hl7-fhir-r4-core.Practitioner/schema zen.fhir/Resource},
+  :type zen/map,
+  :keys
+  {:death-date
+   {:confirms #{fhir-org-nz-ig-base.death-date/schema},
+    :fhir/extensionUri
+    "http://hl7.org.nz/fhir/StructureDefinition/death-date"},
+   :educational-qualification
+   {:type zen/vector,
+    :every
+    {:confirms #{fhir-org-nz-ig-base.educational-qualification/schema},
+     :fhir/extensionUri
+     "http://hl7.org.nz/fhir/StructureDefinition/educational-qualification"}},
+   :ethnicity
+   {:type zen/vector,
+    :every
+    {:confirms #{fhir-org-nz-ig-base.nz-ethnicity/schema},
+     :fhir/extensionUri
+     "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity"}},
+   :iwi
+   {:type zen/vector,
+    :every
+    {:confirms #{fhir-org-nz-ig-base.nz-iwi/schema},
+     :fhir/extensionUri
+     "http://hl7.org.nz/fhir/StructureDefinition/nz-iwi"}},
+   :qualification
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+     :type zen/map,
+     :keys
+     {:additional-authorisation
+      {:type zen/vector,
+       :every
+       {:confirms
+        #{fhir-org-nz-ig-base.additional-authorisation/schema},
+        :fhir/extensionUri
+        "http://hl7.org.nz/fhir/StructureDefinition/additional-authorisation"}},
+      :condition-on-practice
+      {:type zen/vector,
+       :every
+       {:confirms #{fhir-org-nz-ig-base.condition-on-practice/schema},
+        :fhir/extensionUri
+        "http://hl7.org.nz/fhir/StructureDefinition/condition-on-practice"}},
+      :registration-initial-date
+      {:confirms
+       #{fhir-org-nz-ig-base.registration-initial-date/schema},
+       :fhir/extensionUri
+       "http://hl7.org.nz/fhir/StructureDefinition/registration-initial-date"},
+      :registration-status-code
+      {:confirms
+       #{fhir-org-nz-ig-base.registration-status-code/schema},
+       :fhir/extensionUri
+       "http://hl7.org.nz/fhir/StructureDefinition/registration-status-code"},
+      :scope-of-practice
+      {:type zen/vector,
+       :every
+       {:confirms #{fhir-org-nz-ig-base.scope-of-practice/schema},
+        :fhir/extensionUri
+        "http://hl7.org.nz/fhir/StructureDefinition/scope-of-practice"}}}}}}}}

@@ -1,0 +1,16 @@
+{ns fhir-org-nz-ig-base.nz-geocode,
+ import
+ #{hl7-fhir-r4-core.decimal zen.fhir hl7-fhir-r4-core.CodeableConcept},
+ schema
+ {:zen.fhir/version "0.6.1",
+  :zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/profileUri
+  "http://hl7.org.nz/fhir/StructureDefinition/nz-geocode",
+  :require #{:longitude :latitude},
+  :type zen/map,
+  :zen/desc
+  "New Zealand Geocode. This uses a different datum from that defined in the HL7 FHIR specification for a Geocode.",
+  :keys
+  {:latitude {:confirms #{hl7-fhir-r4-core.decimal/schema}},
+   :longitude {:confirms #{hl7-fhir-r4-core.decimal/schema}},
+   :datumCode {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}}}

@@ -1,0 +1,10 @@
+{ns fhir-org-nz-ig-base.nzeps-supply-period-reason,
+ import #{zen.fhir hl7-fhir-r4-core.string},
+ schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen/desc "NZePS Supply Period Reason",
+  :zen.fhir/type "string",
+  :zen.fhir/profileUri
+  "http://hl7.org.nz/fhir/StructureDefinition/nzeps-supply-period-reason",
+  :zen.fhir/version "0.6.1",
+  :confirms #{hl7-fhir-r4-core.string/schema}}}

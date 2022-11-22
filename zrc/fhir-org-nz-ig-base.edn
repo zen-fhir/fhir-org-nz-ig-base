@@ -1,0 +1,156 @@
+{ns fhir-org-nz-ig-base,
+ import #{zen.fhir hl7-fhir-r4-core},
+ extensions
+ {:zen/tags #{zen.fhir/extensions},
+  :schemas
+  {"http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship"
+   #zen/quote fhir-org-nz-ig-base.nz-citizenship/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/messaging-address"
+   #zen/quote fhir-org-nz-ig-base.messaging-address/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/registration-status-code"
+   #zen/quote fhir-org-nz-ig-base.registration-status-code/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/condition-on-practice"
+   #zen/quote fhir-org-nz-ig-base.condition-on-practice/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/funded-programme"
+   #zen/quote fhir-org-nz-ig-base.funded-programme/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/death-date"
+   #zen/quote fhir-org-nz-ig-base.death-date/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/additional-authorisation"
+   #zen/quote fhir-org-nz-ig-base.additional-authorisation/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/nz-geocode"
+   #zen/quote fhir-org-nz-ig-base.nz-geocode/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/practitionerRole-creator"
+   #zen/quote fhir-org-nz-ig-base.practitionerRole-creator/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/scope-of-practice"
+   #zen/quote fhir-org-nz-ig-base.scope-of-practice/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/educational-qualification"
+   #zen/quote fhir-org-nz-ig-base.educational-qualification/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/nz-residency"
+   #zen/quote fhir-org-nz-ig-base.nz-residency/schema}},
+ ig
+ {:zen/tags #{zen.fhir/ig},
+  :profiles profiles,
+  :extensions extensions,
+  :structures structures,
+  :value-sets value-sets},
+ profiles
+ {:zen/tags #{zen.fhir/profiles},
+  :schemas
+  {"Coverage"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzCoverage"
+    #zen/quote fhir-org-nz-ig-base.NzCoverage/schema},
+   "Organization"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzOrganization"
+    #zen/quote fhir-org-nz-ig-base.NzOrganization/schema},
+   "Location"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzLocation"
+    #zen/quote fhir-org-nz-ig-base.NzLocation/schema},
+   "MedicationStatement"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzMedicationStatement"
+    #zen/quote fhir-org-nz-ig-base.NzMedicationStatement/schema},
+   "Patient"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzPatient"
+    #zen/quote fhir-org-nz-ig-base.NzPatient/schema},
+   "PractitionerRole"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzPractitionerRole"
+    #zen/quote fhir-org-nz-ig-base.NzPractitionerRole/schema},
+   "Practitioner"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzPractitioner"
+    #zen/quote fhir-org-nz-ig-base.NzPractitioner/schema},
+   "MedicationRequest"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzMedicationRequest"
+    #zen/quote fhir-org-nz-ig-base.NzMedicationRequest/schema},
+   "Condition"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzCondition"
+    #zen/quote fhir-org-nz-ig-base.NzCondition/schema},
+   "HealthcareService"
+   {"http://hl7.org.nz/fhir/StructureDefinition/NzHealthcareService"
+    #zen/quote fhir-org-nz-ig-base.NzHealthcareService/schema}}},
+ structures
+ {:zen/tags #{zen.fhir/structures},
+  :schemas
+  {"http://hl7.org.nz/fhir/StructureDefinition/established"
+   #zen/quote fhir-org-nz-ig-base.established/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/pho"
+   #zen/quote fhir-org-nz-ig-base.pho/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/dhb"
+   #zen/quote fhir-org-nz-ig-base.dhb/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/nz-iwi"
+   #zen/quote fhir-org-nz-ig-base.nz-iwi/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/information-source"
+   #zen/quote fhir-org-nz-ig-base.information-source/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/registration-initial-date"
+   #zen/quote fhir-org-nz-ig-base.registration-initial-date/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/NzContactpoint"
+   #zen/quote fhir-org-nz-ig-base.NzContactPoint/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth"
+   #zen/quote fhir-org-nz-ig-base.sex-at-birth/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/nzeps-long-term-medication"
+   #zen/quote fhir-org-nz-ig-base.nzeps-long-term-medication/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/nzeps-supply-period-reason"
+   #zen/quote fhir-org-nz-ig-base.nzeps-supply-period-reason/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/practitionerRole-status-reason"
+   #zen/quote fhir-org-nz-ig-base.practitionerRole-status-reason/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/NzAddress"
+   #zen/quote fhir-org-nz-ig-base.NzAddress/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity"
+   #zen/quote fhir-org-nz-ig-base.nz-ethnicity/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/long-term-condition"
+   #zen/quote fhir-org-nz-ig-base.long-term-condition/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/contactpoint-purpose"
+   #zen/quote fhir-org-nz-ig-base.contactpoint-purpose/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/suburb"
+   #zen/quote fhir-org-nz-ig-base.suburb/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/alias-type"
+   #zen/quote fhir-org-nz-ig-base.alias-type/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/edi-address"
+   #zen/quote fhir-org-nz-ig-base.edi-address/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/building-name"
+   #zen/quote fhir-org-nz-ig-base.building-name/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/domicile-code"
+   #zen/quote fhir-org-nz-ig-base.domicile-code/schema,
+   "http://hl7.org.nz/fhir/StructureDefinition/nzeps-unusual-dose-quantity"
+   #zen/quote fhir-org-nz-ig-base.nzeps-unusual-dose-quantity/schema}},
+ value-sets
+ {:zen/tags #{zen.fhir/value-sets},
+  :value-sets
+  {"https://nzhts.digital.health.nz/fhir/ValueSet/practitioner-scope-of-practice-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.practitioner-scope-of-practice/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.ethnicity/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/practitioner-additional-authorisation-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.practitioner-additional-authorisation-code/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.nz-residency/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/pho-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.pho/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/alias-type-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.location-alias-type/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/information-source-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.information-source/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/iwi-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.iwi/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.citizenship-status/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/coverage-category-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.coverage-category/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/contact-point-purpose-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.contact-point-purpose/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/nhi-use-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.nhi-use/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/nz-datum-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.datumCode/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/coverage-type-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.coverage-type/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/domicile-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.domicile-code/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/hpi-practitioner-role-status-reason-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.hpi-practitionerrole-status-reason/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/funded-programme-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.funded-programme/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/practitioner-registration-status-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.practitioner-registration-status-code/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/dhb-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.dhb/value-set,
+   "https://nzhts.digital.health.nz/fhir/ValueSet/dod-information-source-code"
+   #zen/quote fhir-org-nz-ig-base.value-set.dod-information-source/value-set}}}
