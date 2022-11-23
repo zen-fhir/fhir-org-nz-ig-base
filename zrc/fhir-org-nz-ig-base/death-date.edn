@@ -9,7 +9,7 @@
   "The date of death of the individual, plus the source of that information",
   :zen.fhir/profileUri
   "http://hl7.org.nz/fhir/StructureDefinition/death-date",
-  :zen.fhir/version "0.6.1",
+  :zen.fhir/version "0.6.2",
   :type zen/map,
   :keys
   {:date
