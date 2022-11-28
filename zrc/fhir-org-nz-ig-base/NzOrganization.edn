@@ -2,8 +2,6 @@
  import
  #{zen.fhir
    fhir-org-nz-ig-base.established
-   hl7-fhir-r4-core.string
-   hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.Organization
    fhir-org-nz-ig-base.funded-programme
    fhir-org-nz-ig-base.alias-type},
@@ -13,7 +11,7 @@
   :zen.fhir/type "Organization",
   :zen.fhir/profileUri
   "http://hl7.org.nz/fhir/StructureDefinition/NzOrganization",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :confirms #{hl7-fhir-r4-core.Organization/schema zen.fhir/Resource},
   :type zen/map,
   :keys
@@ -27,14 +25,11 @@
     {:confirms #{fhir-org-nz-ig-base.funded-programme/schema},
      :fhir/extensionUri
      "http://hl7.org.nz/fhir/StructureDefinition/funded-programme"}},
-   :alias
-   {:type zen/vector,
-    :every {:confirms #{hl7-fhir-r4-core.string/schema}}},
+   :alias {:type zen/vector, :every {}},
    :_alias
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.Element/schema},
-     :type zen/map,
+    {:type zen/map,
      :keys
      {:alias-type
       {:confirms #{fhir-org-nz-ig-base.alias-type/schema},

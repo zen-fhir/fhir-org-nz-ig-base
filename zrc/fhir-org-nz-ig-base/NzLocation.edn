@@ -3,9 +3,7 @@
  #{zen.fhir
    fhir-org-nz-ig-base.established
    fhir-org-nz-ig-base.dhb
-   hl7-fhir-r4-core.string
    fhir-org-nz-ig-base.pho
-   hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.Location
    fhir-org-nz-ig-base.funded-programme
    fhir-org-nz-ig-base.alias-type},
@@ -15,7 +13,7 @@
   :zen.fhir/type "Location",
   :zen.fhir/profileUri
   "http://hl7.org.nz/fhir/StructureDefinition/NzLocation",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :confirms #{hl7-fhir-r4-core.Location/schema zen.fhir/Resource},
   :type zen/map,
   :keys
@@ -35,14 +33,11 @@
    {:confirms #{fhir-org-nz-ig-base.pho/schema},
     :fhir/extensionUri
     "http://hl7.org.nz/fhir/StructureDefinition/pho"},
-   :alias
-   {:type zen/vector,
-    :every {:confirms #{hl7-fhir-r4-core.string/schema}}},
+   :alias {:type zen/vector, :every {}},
    :_alias
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.Element/schema},
-     :type zen/map,
+    {:type zen/map,
      :keys
      {:alias-type
       {:confirms #{fhir-org-nz-ig-base.alias-type/schema},

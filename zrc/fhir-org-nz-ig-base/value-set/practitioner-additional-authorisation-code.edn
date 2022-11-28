@@ -4,7 +4,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "A coded type for additional authorisations",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :fhir/code-systems
   #{{:fhir/url
      "https://standards.digital.health.nz/ns/practitioner-additional-authorisation-code",

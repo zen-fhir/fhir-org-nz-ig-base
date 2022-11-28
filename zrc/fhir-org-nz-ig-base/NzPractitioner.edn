@@ -1,7 +1,6 @@
 {ns fhir-org-nz-ig-base.NzPractitioner,
  import
  #{fhir-org-nz-ig-base.registration-initial-date
-   hl7-fhir-r4-core.BackboneElement
    zen.fhir
    fhir-org-nz-ig-base.condition-on-practice
    fhir-org-nz-ig-base.scope-of-practice
@@ -18,7 +17,7 @@
   :zen.fhir/type "Practitioner",
   :zen.fhir/profileUri
   "http://hl7.org.nz/fhir/StructureDefinition/NzPractitioner",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :confirms #{hl7-fhir-r4-core.Practitioner/schema zen.fhir/Resource},
   :type zen/map,
   :keys
@@ -47,8 +46,7 @@
    :qualification
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
+    {:type zen/map,
      :keys
      {:additional-authorisation
       {:type zen/vector,
