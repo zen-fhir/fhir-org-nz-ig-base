@@ -13,7 +13,7 @@
   :zen.fhir/type "Location",
   :zen.fhir/profileUri
   "http://hl7.org.nz/fhir/StructureDefinition/NzLocation",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :confirms #{hl7-fhir-r4-core.Location/schema zen.fhir/Resource},
   :type zen/map,
   :keys
@@ -33,7 +33,6 @@
    {:confirms #{fhir-org-nz-ig-base.pho/schema},
     :fhir/extensionUri
     "http://hl7.org.nz/fhir/StructureDefinition/pho"},
-   :alias {:type zen/vector, :every {}},
    :_alias
    {:type zen/vector,
     :every

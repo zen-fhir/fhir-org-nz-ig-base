@@ -18,7 +18,7 @@
   :zen.fhir/type "Patient",
   :zen.fhir/profileUri
   "http://hl7.org.nz/fhir/StructureDefinition/NzPatient",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :confirms #{hl7-fhir-r4-core.Patient/schema zen.fhir/Resource},
   :type zen/map,
   :keys
@@ -40,7 +40,8 @@
     :fhir/extensionUri
     "http://hl7.org.nz/fhir/StructureDefinition/domicile-code"},
    :identifier
-   {:slicing
+   {:type zen/vector,
+    :slicing
     {:slices
      {"NHI"
       {:schema
@@ -60,9 +61,7 @@
        :filter
        {:engine :match,
         :match
-        {:system "https://standards.digital.health.nz/ns/nhi-id"}}}}},
-    :type zen/vector,
-    :every {}},
+        {:system "https://standards.digital.health.nz/ns/nhi-id"}}}}}},
    :iwi
    {:type zen/vector,
     :every
