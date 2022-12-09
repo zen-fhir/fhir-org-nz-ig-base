@@ -11,7 +11,7 @@
   :zen.fhir/type "Organization",
   :zen.fhir/profileUri
   "http://hl7.org.nz/fhir/StructureDefinition/NzOrganization",
-  :zen.fhir/version "0.6.6",
+  :zen.fhir/version "0.6.6-7",
   :confirms #{hl7-fhir-r4-core.Organization/schema zen.fhir/Resource},
   :type zen/map,
   :keys
