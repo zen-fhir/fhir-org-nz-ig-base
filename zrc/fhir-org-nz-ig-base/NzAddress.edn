@@ -1,40 +1,26 @@
 {ns fhir-org-nz-ig-base.NzAddress,
- import
- #{zen.fhir
-   fhir-org-nz-ig-base.nz-geocode
-   fhir-org-nz-ig-base.domicile-code
-   hl7-fhir-r4-core.Address
-   fhir-org-nz-ig-base.building-name
-   fhir-org-nz-ig-base.suburb},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "Adds building name, suburb, domicile code and geocode to the Address datatype",
-  :zen.fhir/type "Address",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/NzAddress",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Address/schema},
-  :type zen/map,
-  :keys
-  {:nz-geocode
-   {:confirms #{fhir-org-nz-ig-base.nz-geocode/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/nz-geocode",
-    :zen/desc
-    "A geocode using the NZ specific datum (reference point)"},
-   :suburb
-   {:confirms #{fhir-org-nz-ig-base.suburb/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/suburb",
-    :zen/desc "The suburb part of the address"},
-   :building-name
-   {:confirms #{fhir-org-nz-ig-base.building-name/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/building-name",
-    :zen/desc "The name of the building"},
-   :domicile-code
-   {:confirms #{fhir-org-nz-ig-base.domicile-code/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/domicile-code",
-    :zen/desc "The domicile code associated with this address"}}}}
+ import #{zen.fhir
+          fhir-org-nz-ig-base.nz-geocode
+          fhir-org-nz-ig-base.domicile-code
+          hl7-fhir-r4-core.Address
+          fhir-org-nz-ig-base.building-name
+          fhir-org-nz-ig-base.suburb},
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "Adds building name, suburb, domicile code and geocode to the Address datatype",
+         :zen.fhir/type "Address",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzAddress",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Address/schema},
+         :type zen/map,
+         :keys {:nz-geocode {:confirms #{fhir-org-nz-ig-base.nz-geocode/schema},
+                             :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/nz-geocode",
+                             :zen/desc "A geocode using the NZ specific datum (reference point)"},
+                :suburb {:confirms #{fhir-org-nz-ig-base.suburb/schema},
+                         :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/suburb",
+                         :zen/desc "The suburb part of the address"},
+                :building-name {:confirms #{fhir-org-nz-ig-base.building-name/schema},
+                                :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/building-name",
+                                :zen/desc "The name of the building"},
+                :domicile-code {:confirms #{fhir-org-nz-ig-base.domicile-code/schema},
+                                :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/domicile-code",
+                                :zen/desc "The domicile code associated with this address"}}}}

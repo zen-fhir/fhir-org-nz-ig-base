@@ -1,14 +1,11 @@
 {ns fhir-org-nz-ig-base.scope-of-practice,
- import
- #{hl7-fhir-r4-core.Period zen.fhir hl7-fhir-r4-core.CodeableConcept},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "The type or range of health services a practitioner is authorised to perform, as determined by the Responsible Authority or professional body.",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/scope-of-practice",
-  :zen.fhir/version "0.6.6-7",
-  :type zen/map,
-  :keys
-  {:code {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
-   :period {:confirms #{hl7-fhir-r4-core.Period/schema}}}}}
+ import #{hl7-fhir-r4-core.Period
+          zen.fhir
+          hl7-fhir-r4-core.CodeableConcept},
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "The type or range of health services a practitioner is authorised to perform, as determined by the Responsible Authority or professional body.",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/scope-of-practice",
+         :zen.fhir/version "0.6.6-8",
+         :type zen/map,
+         :keys {:code {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
+                :period {:confirms #{hl7-fhir-r4-core.Period/schema}}}}}

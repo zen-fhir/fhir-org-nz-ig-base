@@ -1,12 +1,9 @@
 {ns fhir-org-nz-ig-base.nz-citizenship,
  import #{zen.fhir hl7-fhir-r4-core.CodeableConcept},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc "New Zealand citizenship",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship",
-  :zen.fhir/version "0.6.6-7",
-  :type zen/map,
-  :keys
-  {:status {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
-   :source {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}}}
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "New Zealand citizenship",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship",
+         :zen.fhir/version "0.6.6-8",
+         :type zen/map,
+         :keys {:status {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
+                :source {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}}}

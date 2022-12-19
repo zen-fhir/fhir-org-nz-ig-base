@@ -1,20 +1,13 @@
 {ns fhir-org-nz-ig-base.death-date,
- import
- #{zen.fhir
-   hl7-fhir-r4-core.dateTime
-   hl7-fhir-r4-core.CodeableConcept},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "The date of death of the individual, plus the source of that information",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/death-date",
-  :zen.fhir/version "0.6.6-7",
-  :type zen/map,
-  :keys
-  {:date
-   {:confirms #{hl7-fhir-r4-core.dateTime/schema},
-    :zen/desc "The date of death"},
-   :source
-   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-    :zen/desc "The source of information"}}}}
+ import #{zen.fhir
+          hl7-fhir-r4-core.dateTime
+          hl7-fhir-r4-core.CodeableConcept},
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "The date of death of the individual, plus the source of that information",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/death-date",
+         :zen.fhir/version "0.6.6-8",
+         :type zen/map,
+         :keys {:date {:confirms #{hl7-fhir-r4-core.dateTime/schema},
+                       :zen/desc "The date of death"},
+                :source {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+                         :zen/desc "The source of information"}}}}

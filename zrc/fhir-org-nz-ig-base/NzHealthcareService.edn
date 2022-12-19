@@ -1,27 +1,18 @@
 {ns fhir-org-nz-ig-base.NzHealthcareService,
- import
- #{hl7-fhir-r4-core.HealthcareService
-   zen.fhir
-   fhir-org-nz-ig-base.dhb
-   fhir-org-nz-ig-base.funded-programme},
- schema
- {:zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen/desc "HealthcareService resource for use in NZ",
-  :zen.fhir/type "HealthcareService",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/NzHealthcareService",
-  :zen.fhir/version "0.6.6-7",
-  :confirms
-  #{hl7-fhir-r4-core.HealthcareService/schema zen.fhir/Resource},
-  :type zen/map,
-  :keys
-  {:dhb
-   {:confirms #{fhir-org-nz-ig-base.dhb/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/dhb"},
-   :funded-programme
-   {:type zen/vector,
-    :every
-    {:confirms #{fhir-org-nz-ig-base.funded-programme/schema},
-     :fhir/extensionUri
-     "http://hl7.org.nz/fhir/StructureDefinition/funded-programme"}}}}}
+ import #{hl7-fhir-r4-core.HealthcareService
+          zen.fhir
+          fhir-org-nz-ig-base.dhb
+          fhir-org-nz-ig-base.funded-programme},
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen/desc "HealthcareService resource for use in NZ",
+         :zen.fhir/type "HealthcareService",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzHealthcareService",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.HealthcareService/schema
+                     zen.fhir/Resource},
+         :type zen/map,
+         :keys {:dhb {:confirms #{fhir-org-nz-ig-base.dhb/schema},
+                      :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/dhb"},
+                :funded-programme {:type zen/vector,
+                                   :every {:confirms #{fhir-org-nz-ig-base.funded-programme/schema},
+                                           :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/funded-programme"}}}}}

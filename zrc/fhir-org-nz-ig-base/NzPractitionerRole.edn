@@ -1,26 +1,17 @@
 {ns fhir-org-nz-ig-base.NzPractitionerRole,
- import
- #{zen.fhir
-   fhir-org-nz-ig-base.practitionerRole-creator
-   hl7-fhir-r4-core.PractitionerRole
-   fhir-org-nz-ig-base.practitionerRole-status-reason},
- schema
- {:zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen/desc "PractitionerRole resource for use in NZ",
-  :zen.fhir/type "PractitionerRole",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/NzPractitionerRole",
-  :zen.fhir/version "0.6.6-7",
-  :confirms
-  #{hl7-fhir-r4-core.PractitionerRole/schema zen.fhir/Resource},
-  :type zen/map,
-  :keys
-  {:practitionerRole-creator
-   {:confirms #{fhir-org-nz-ig-base.practitionerRole-creator/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/practitionerRole-creator"},
-   :practitionerRole-status-reason
-   {:confirms
-    #{fhir-org-nz-ig-base.practitionerRole-status-reason/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/practitionerRole-status-reason"}}}}
+ import #{zen.fhir
+          fhir-org-nz-ig-base.practitionerRole-creator
+          hl7-fhir-r4-core.PractitionerRole
+          fhir-org-nz-ig-base.practitionerRole-status-reason},
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen/desc "PractitionerRole resource for use in NZ",
+         :zen.fhir/type "PractitionerRole",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzPractitionerRole",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.PractitionerRole/schema
+                     zen.fhir/Resource},
+         :type zen/map,
+         :keys {:practitionerRole-creator {:confirms #{fhir-org-nz-ig-base.practitionerRole-creator/schema},
+                                           :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/practitionerRole-creator"},
+                :practitionerRole-status-reason {:confirms #{fhir-org-nz-ig-base.practitionerRole-status-reason/schema},
+                                                 :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/practitionerRole-status-reason"}}}}

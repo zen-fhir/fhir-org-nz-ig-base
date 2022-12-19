@@ -1,36 +1,23 @@
 {ns fhir-org-nz-ig-base.NzOrganization,
- import
- #{zen.fhir
-   fhir-org-nz-ig-base.established
-   hl7-fhir-r4-core.Organization
-   fhir-org-nz-ig-base.funded-programme
-   fhir-org-nz-ig-base.alias-type},
- schema
- {:zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen/desc "Organization resource for use in NZ",
-  :zen.fhir/type "Organization",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/NzOrganization",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Organization/schema zen.fhir/Resource},
-  :type zen/map,
-  :keys
-  {:established
-   {:confirms #{fhir-org-nz-ig-base.established/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/established"},
-   :funded-programme
-   {:type zen/vector,
-    :every
-    {:confirms #{fhir-org-nz-ig-base.funded-programme/schema},
-     :fhir/extensionUri
-     "http://hl7.org.nz/fhir/StructureDefinition/funded-programme"}},
-   :_alias
-   {:type zen/vector,
-    :every
-    {:type zen/map,
-     :keys
-     {:alias-type
-      {:confirms #{fhir-org-nz-ig-base.alias-type/schema},
-       :fhir/extensionUri
-       "http://hl7.org.nz/fhir/StructureDefinition/alias-type"}}}}}}}
+ import #{zen.fhir
+          fhir-org-nz-ig-base.established
+          hl7-fhir-r4-core.Organization
+          fhir-org-nz-ig-base.funded-programme
+          fhir-org-nz-ig-base.alias-type},
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen/desc "Organization resource for use in NZ",
+         :zen.fhir/type "Organization",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzOrganization",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Organization/schema
+                     zen.fhir/Resource},
+         :type zen/map,
+         :keys {:established {:confirms #{fhir-org-nz-ig-base.established/schema},
+                              :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/established"},
+                :funded-programme {:type zen/vector,
+                                   :every {:confirms #{fhir-org-nz-ig-base.funded-programme/schema},
+                                           :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/funded-programme"}},
+                :_alias {:type zen/vector,
+                         :every {:type zen/map,
+                                 :keys {:alias-type {:confirms #{fhir-org-nz-ig-base.alias-type/schema},
+                                                     :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/alias-type"}}}}}}}

@@ -1,31 +1,20 @@
 {ns fhir-org-nz-ig-base.NzMedicationRequest,
- import
- #{zen.fhir
-   fhir-org-nz-ig-base.nzeps-supply-period-reason
-   hl7-fhir-r4-core.MedicationRequest
-   fhir-org-nz-ig-base.nzeps-long-term-medication
-   fhir-org-nz-ig-base.nzeps-unusual-dose-quantity},
- schema
- {:zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen/desc "MedicationRequest resource for use in NZ",
-  :zen.fhir/type "MedicationRequest",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/NzMedicationRequest",
-  :zen.fhir/version "0.6.6-7",
-  :confirms
-  #{zen.fhir/Resource hl7-fhir-r4-core.MedicationRequest/schema},
-  :type zen/map,
-  :keys
-  {:nzeps-long-term-medication
-   {:confirms #{fhir-org-nz-ig-base.nzeps-long-term-medication/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/nzeps-long-term-medication"},
-   :nzeps-supply-period-reason
-   {:confirms #{fhir-org-nz-ig-base.nzeps-supply-period-reason/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/nzeps-supply-period-reason"},
-   :nzeps-unusual-dose-quantity
-   {:confirms
-    #{fhir-org-nz-ig-base.nzeps-unusual-dose-quantity/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/nzeps-unusual-dose-quantity"}}}}
+ import #{zen.fhir
+          fhir-org-nz-ig-base.nzeps-supply-period-reason
+          hl7-fhir-r4-core.MedicationRequest
+          fhir-org-nz-ig-base.nzeps-long-term-medication
+          fhir-org-nz-ig-base.nzeps-unusual-dose-quantity},
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen/desc "MedicationRequest resource for use in NZ",
+         :zen.fhir/type "MedicationRequest",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzMedicationRequest",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{zen.fhir/Resource
+                     hl7-fhir-r4-core.MedicationRequest/schema},
+         :type zen/map,
+         :keys {:nzeps-long-term-medication {:confirms #{fhir-org-nz-ig-base.nzeps-long-term-medication/schema},
+                                             :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/nzeps-long-term-medication"},
+                :nzeps-supply-period-reason {:confirms #{fhir-org-nz-ig-base.nzeps-supply-period-reason/schema},
+                                             :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/nzeps-supply-period-reason"},
+                :nzeps-unusual-dose-quantity {:confirms #{fhir-org-nz-ig-base.nzeps-unusual-dose-quantity/schema},
+                                              :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/nzeps-unusual-dose-quantity"}}}}

@@ -1,19 +1,14 @@
 {ns fhir-org-nz-ig-base.value-set.information-source,
  import #{zen.fhir},
- value-set
- {:zen/tags #{zen.fhir/value-set},
-  :zen/desc "The source from where the value of this item was sourced",
-  :zen.fhir/version "0.6.6-7",
-  :fhir/code-systems
-  #{{:fhir/url
-     "https://standards.digital.health.nz/ns/information-source-code",
-     :zen.fhir/content :bundled}},
-  :uri
-  "https://nzhts.digital.health.nz/fhir/ValueSet/information-source-code",
-  :version "1.0.0",
-  :ftr
-  {:module "ig",
-   :source-urls ["node_modules/fhir.org.nz.ig.base"],
-   :source-type :igs,
-   :ftr-path "ftr",
-   :tag "init"}}}
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "The source from where the value of this item was sourced",
+            :zen.fhir/version "0.6.6-8",
+            :fhir/code-systems #{{:fhir/url "https://standards.digital.health.nz/ns/information-source-code",
+                                  :zen.fhir/content :bundled}},
+            :uri "https://nzhts.digital.health.nz/fhir/ValueSet/information-source-code",
+            :version "1.0.0",
+            :ftr {:module "ig",
+                  :source-urls ["node_modules/fhir.org.nz.ig.base"],
+                  :source-type :igs,
+                  :ftr-path "ftr",
+                  :tag "init"}}}

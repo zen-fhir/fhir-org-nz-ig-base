@@ -1,86 +1,51 @@
 {ns fhir-org-nz-ig-base.NzPatient,
- import
- #{fhir-org-nz-ig-base.value-set.nhi-use
-   zen.fhir
-   fhir-org-nz-ig-base.domicile-code
-   fhir-org-nz-ig-base.dhb
-   hl7-fhir-r4-core.Patient
-   fhir-org-nz-ig-base.pho
-   fhir-org-nz-ig-base.nz-ethnicity
-   fhir-org-nz-ig-base.nz-iwi
-   fhir-org-nz-ig-base.sex-at-birth
-   fhir-org-nz-ig-base.nz-citizenship
-   fhir-org-nz-ig-base.NzAddress
-   fhir-org-nz-ig-base.NzContactPoint},
- schema
- {:zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen/desc "The base New Zealand Patient profile",
-  :zen.fhir/type "Patient",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/NzPatient",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Patient/schema zen.fhir/Resource},
-  :type zen/map,
-  :keys
-  {:address
-   {:type zen/vector,
-    :every {:confirms #{fhir-org-nz-ig-base.NzAddress/schema}}},
-   :ethnicity
-   {:type zen/vector,
-    :every
-    {:confirms #{fhir-org-nz-ig-base.nz-ethnicity/schema},
-     :fhir/extensionUri
-     "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity"}},
-   :pho
-   {:confirms #{fhir-org-nz-ig-base.pho/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/pho"},
-   :domicile-code
-   {:confirms #{fhir-org-nz-ig-base.domicile-code/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/domicile-code"},
-   :identifier
-   {:type zen/vector,
-    :slicing
-    {:slices
-     {"NHI"
-      {:schema
-       {:type zen/vector,
-        :every
-        {:type zen/map,
-         :keys
-         {:use
-          #:zen.fhir{:value-set
-                     {:symbol
-                      fhir-org-nz-ig-base.value-set.nhi-use/value-set,
-                      :strength :required}},
-          :system
-          {:const
-           {:value "https://standards.digital.health.nz/ns/nhi-id"}}},
-         :require #{:system}}},
-       :filter
-       {:engine :match,
-        :match
-        {:system "https://standards.digital.health.nz/ns/nhi-id"}}}}}},
-   :iwi
-   {:type zen/vector,
-    :every
-    {:confirms #{fhir-org-nz-ig-base.nz-iwi/schema},
-     :fhir/extensionUri
-     "http://hl7.org.nz/fhir/StructureDefinition/nz-iwi"}},
-   :nzCitizen
-   {:confirms #{fhir-org-nz-ig-base.nz-citizenship/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship",
-    :zen/desc "Is this person a New Zealand citizen"},
-   :telecom
-   {:type zen/vector,
-    :every {:confirms #{fhir-org-nz-ig-base.NzContactPoint/schema}}},
-   :sex-at-birth
-   {:confirms #{fhir-org-nz-ig-base.sex-at-birth/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth"},
-   :dhb
-   {:confirms #{fhir-org-nz-ig-base.dhb/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/dhb"}}}}
+ import #{fhir-org-nz-ig-base.value-set.nhi-use
+          zen.fhir
+          fhir-org-nz-ig-base.domicile-code
+          fhir-org-nz-ig-base.dhb
+          hl7-fhir-r4-core.Patient
+          fhir-org-nz-ig-base.pho
+          fhir-org-nz-ig-base.nz-ethnicity
+          fhir-org-nz-ig-base.nz-iwi
+          fhir-org-nz-ig-base.sex-at-birth
+          fhir-org-nz-ig-base.nz-citizenship
+          fhir-org-nz-ig-base.NzAddress
+          fhir-org-nz-ig-base.NzContactPoint},
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen/desc "The base New Zealand Patient profile",
+         :zen.fhir/type "Patient",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzPatient",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Patient/schema
+                     zen.fhir/Resource},
+         :type zen/map,
+         :keys {:address {:type zen/vector,
+                          :every {:confirms #{fhir-org-nz-ig-base.NzAddress/schema}}},
+                :ethnicity {:type zen/vector,
+                            :every {:confirms #{fhir-org-nz-ig-base.nz-ethnicity/schema},
+                                    :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity"}},
+                :pho {:confirms #{fhir-org-nz-ig-base.pho/schema},
+                      :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/pho"},
+                :domicile-code {:confirms #{fhir-org-nz-ig-base.domicile-code/schema},
+                                :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/domicile-code"},
+                :identifier {:type zen/vector,
+                             :slicing {:slices {"NHI" {:schema {:type zen/vector,
+                                                                :every {:type zen/map,
+                                                                        :keys {:use {:zen.fhir/value-set {:symbol fhir-org-nz-ig-base.value-set.nhi-use/value-set,
+                                                                                                          :strength :required}},
+                                                                               :system {:const {:value "https://standards.digital.health.nz/ns/nhi-id"}}},
+                                                                        :require #{:system}}},
+                                                       :filter {:engine :match,
+                                                                :match {:system "https://standards.digital.health.nz/ns/nhi-id"}}}}}},
+                :iwi {:type zen/vector,
+                      :every {:confirms #{fhir-org-nz-ig-base.nz-iwi/schema},
+                              :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/nz-iwi"}},
+                :nzCitizen {:confirms #{fhir-org-nz-ig-base.nz-citizenship/schema},
+                            :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship",
+                            :zen/desc "Is this person a New Zealand citizen"},
+                :telecom {:type zen/vector,
+                          :every {:confirms #{fhir-org-nz-ig-base.NzContactPoint/schema}}},
+                :sex-at-birth {:confirms #{fhir-org-nz-ig-base.sex-at-birth/schema},
+                               :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth"},
+                :dhb {:confirms #{fhir-org-nz-ig-base.dhb/schema},
+                      :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/dhb"}}}}

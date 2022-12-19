@@ -1,44 +1,28 @@
 {ns fhir-org-nz-ig-base.NzLocation,
- import
- #{zen.fhir
-   fhir-org-nz-ig-base.established
-   fhir-org-nz-ig-base.dhb
-   fhir-org-nz-ig-base.pho
-   hl7-fhir-r4-core.Location
-   fhir-org-nz-ig-base.funded-programme
-   fhir-org-nz-ig-base.alias-type},
- schema
- {:zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen/desc "Location resource for use in NZ",
-  :zen.fhir/type "Location",
-  :zen.fhir/profileUri
-  "http://hl7.org.nz/fhir/StructureDefinition/NzLocation",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Location/schema zen.fhir/Resource},
-  :type zen/map,
-  :keys
-  {:dhb
-   {:confirms #{fhir-org-nz-ig-base.dhb/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/dhb"},
-   :established
-   {:confirms #{fhir-org-nz-ig-base.established/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/established"},
-   :funded-programme
-   {:confirms #{fhir-org-nz-ig-base.funded-programme/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/funded-programme"},
-   :pho
-   {:confirms #{fhir-org-nz-ig-base.pho/schema},
-    :fhir/extensionUri
-    "http://hl7.org.nz/fhir/StructureDefinition/pho"},
-   :_alias
-   {:type zen/vector,
-    :every
-    {:type zen/map,
-     :keys
-     {:alias-type
-      {:confirms #{fhir-org-nz-ig-base.alias-type/schema},
-       :fhir/extensionUri
-       "http://hl7.org.nz/fhir/StructureDefinition/alias-type"}}}}}}}
+ import #{zen.fhir
+          fhir-org-nz-ig-base.established
+          fhir-org-nz-ig-base.dhb
+          fhir-org-nz-ig-base.pho
+          hl7-fhir-r4-core.Location
+          fhir-org-nz-ig-base.funded-programme
+          fhir-org-nz-ig-base.alias-type},
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen/desc "Location resource for use in NZ",
+         :zen.fhir/type "Location",
+         :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzLocation",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Location/schema
+                     zen.fhir/Resource},
+         :type zen/map,
+         :keys {:dhb {:confirms #{fhir-org-nz-ig-base.dhb/schema},
+                      :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/dhb"},
+                :established {:confirms #{fhir-org-nz-ig-base.established/schema},
+                              :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/established"},
+                :funded-programme {:confirms #{fhir-org-nz-ig-base.funded-programme/schema},
+                                   :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/funded-programme"},
+                :pho {:confirms #{fhir-org-nz-ig-base.pho/schema},
+                      :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/pho"},
+                :_alias {:type zen/vector,
+                         :every {:type zen/map,
+                                 :keys {:alias-type {:confirms #{fhir-org-nz-ig-base.alias-type/schema},
+                                                     :fhir/extensionUri "http://hl7.org.nz/fhir/StructureDefinition/alias-type"}}}}}}}
