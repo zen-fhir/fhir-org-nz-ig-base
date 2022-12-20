@@ -3,7 +3,7 @@
  schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen/desc "Educational qualifications a practitioner has. These may or may not be related to registration information.",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/educational-qualification",
-         :zen.fhir/version "0.6.7",
+         :zen.fhir/version "0.6.7-2",
          :type zen/map,
          :keys {:fullname {:confirms #{hl7-fhir-r4-core.string/schema},
                            :zen/desc "The full name of the educational qualification"},

@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The source from where the value of this item was sourced",
-            :zen.fhir/version "0.6.7",
+            :zen.fhir/version "0.6.7-2",
             :fhir/code-systems #{{:fhir/url "https://standards.digital.health.nz/ns/information-source-code",
                                   :zen.fhir/content :bundled}},
             :uri "https://nzhts.digital.health.nz/fhir/ValueSet/information-source-code",

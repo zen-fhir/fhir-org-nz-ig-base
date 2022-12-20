@@ -14,7 +14,7 @@
          :zen/desc "Practitioner resource for use in NZ",
          :zen.fhir/type "Practitioner",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzPractitioner",
-         :zen.fhir/version "0.6.7",
+         :zen.fhir/version "0.6.7-2",
          :confirms #{hl7-fhir-r4-core.Practitioner/schema
                      zen.fhir/Resource},
          :type zen/map,
