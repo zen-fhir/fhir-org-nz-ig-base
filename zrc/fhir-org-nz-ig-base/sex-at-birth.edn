@@ -4,5 +4,5 @@
          :zen/desc "A person’s sex at the time of their birth (considered to be immutable).",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth",
-         :zen.fhir/version "0.6.7-2",
+         :zen.fhir/version "0.6.7-3",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

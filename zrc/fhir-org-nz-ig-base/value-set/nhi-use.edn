@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "NHI Use codes",
-            :zen.fhir/version "0.6.7-2",
+            :zen.fhir/version "0.6.7-3",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/identifier-use",
                                   :zen.fhir/content :bundled}},
             :uri "https://nzhts.digital.health.nz/fhir/ValueSet/nhi-use-code",
