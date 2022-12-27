@@ -4,5 +4,5 @@
          :zen/desc "The period over which the location or Organization is open",
          :zen.fhir/type "Period",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/established",
-         :zen.fhir/version "0.6.7-3",
+         :zen.fhir/version "0.6.7-4",
          :confirms #{hl7-fhir-r4-core.Period/schema}}}
