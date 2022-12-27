@@ -6,7 +6,7 @@
          :zen/desc "This profile adds the Contact Point Purpose and EDI address extensions to the standard data type",
          :zen.fhir/type "ContactPoint",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzContactpoint",
-         :zen.fhir/version "0.6.7-4",
+         :zen.fhir/version "0.6.7-5",
          :confirms #{hl7-fhir-r4-core.ContactPoint/schema},
          :type zen/map,
          :keys {:cp-purpose {:confirms #{fhir-org-nz-ig-base.contactpoint-purpose/schema},

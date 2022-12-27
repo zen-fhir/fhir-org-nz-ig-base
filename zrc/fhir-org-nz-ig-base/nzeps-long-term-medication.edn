@@ -4,5 +4,5 @@
          :zen/desc "NZePS Long Term Medication",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/nzeps-long-term-medication",
-         :zen.fhir/version "0.6.7-4",
+         :zen.fhir/version "0.6.7-5",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}

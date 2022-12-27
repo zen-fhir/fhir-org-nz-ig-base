@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Codes to record a person's ethnicity, drawn from [Level 4 of the Ethnicity code system](http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/YVqOcFHSlguKkT17)",
-            :zen.fhir/version "0.6.7-4",
+            :zen.fhir/version "0.6.7-5",
             :fhir/code-systems #{{:fhir/url "https://standards.digital.health.nz/ns/ethnic-group-level-4-code",
                                   :zen.fhir/content :bundled}},
             :uri "https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code",
