@@ -9,7 +9,7 @@
          :zen/desc "Adds building name, suburb, domicile code and geocode to the Address datatype",
          :zen.fhir/type "Address",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzAddress",
-         :zen.fhir/version "0.6.7-5",
+         :zen.fhir/version "0.6.8",
          :confirms #{hl7-fhir-r4-core.Address/schema},
          :type zen/map,
          :keys {:nz-geocode {:confirms #{fhir-org-nz-ig-base.nz-geocode/schema},
