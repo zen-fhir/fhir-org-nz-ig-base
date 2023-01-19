@@ -3,7 +3,7 @@
  schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen/desc "A full description of the conditions the health practitioner is subject to in relation to their scope of practice.",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/condition-on-practice",
-         :zen.fhir/version "0.6.9",
+         :zen.fhir/version "0.6.10",
          :type zen/map,
          :keys {:description {:confirms #{hl7-fhir-r4-core.string/schema}},
                 :period {:confirms #{hl7-fhir-r4-core.Period/schema}}}}}
