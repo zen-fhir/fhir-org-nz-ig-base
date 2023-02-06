@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "District Health Board Identifer. Assigned by the HPI.",
-            :zen.fhir/version "0.6.10",
+            :zen.fhir/version "0.6.12-1",
             :fhir/code-systems #{{:fhir/url "https://standards.digital.health.nz/ns/dhb-code",
                                   :zen.fhir/content :bundled}},
             :uri "https://nzhts.digital.health.nz/fhir/ValueSet/dhb-code",
