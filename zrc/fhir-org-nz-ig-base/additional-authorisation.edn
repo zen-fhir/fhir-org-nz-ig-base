@@ -5,7 +5,7 @@
  schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen/desc "Additional authorisations that a practitioner is authorised to perform",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/additional-authorisation",
-         :zen.fhir/version "0.6.12-1",
+         :zen.fhir/version "0.16.13-2",
          :type zen/map,
          :keys {:code {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
                 :period {:confirms #{hl7-fhir-r4-core.Period/schema}}}}}

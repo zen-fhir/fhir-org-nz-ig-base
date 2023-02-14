@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "New Zealand iwi codes.  The 2 digit codes are abstract codes and provided in the expansion for navigational purposes. A user should not select an abstract code directly as a proper value.",
-            :zen.fhir/version "0.6.12-1",
+            :zen.fhir/version "0.16.13-2",
             :fhir/code-systems #{{:fhir/url "https://standards.digital.health.nz/ns/iwi-code",
                                   :zen.fhir/content :bundled}},
             :uri "https://nzhts.digital.health.nz/fhir/ValueSet/iwi-code",
