@@ -1,8 +1,3 @@
 {:deps
  {zen.fhir "https://github.com/zen-fhir/zen.fhir.git",
-  hl7-fhir-r4-core "https://github.com/zen-fhir/hl7-fhir-r4-core.git"},
- :ftr-build-deps
- {"http://snomed.info/sct"
-  {:source-url "https://storage.googleapis.com/ftr",
-   :module "snomed",
-   :tag "prod"}}}
+  hl7-fhir-r4-core "https://github.com/zen-fhir/hl7-fhir-r4-core.git"}}
