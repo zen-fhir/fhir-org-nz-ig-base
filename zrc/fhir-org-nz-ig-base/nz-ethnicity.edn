@@ -4,5 +4,5 @@
          :zen/desc "The ethnic group or groups that a person identifies with or feels they belong to.  Ethnicity is a measure of cultural affiliation as opposed to race, ancestry, nationality or citizen.  Ethnicity is self-perceived and a person can belong to more than one group.\n\nThe Stats New Zealand standard can be found [here](http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/YVqOcFHSlguKkT17).",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity",
-         :zen.fhir/version "0.6.16-2",
+         :zen.fhir/version "0.6.16-3",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}
