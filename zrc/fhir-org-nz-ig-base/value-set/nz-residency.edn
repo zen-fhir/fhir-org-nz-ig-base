@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Is the person a NZ resident",
-            :zen.fhir/version "0.6.17-1",
+            :zen.fhir/version "0.6.17-2",
             :fhir/code-systems #{{:fhir/url "https://standards.digital.health.nz/ns/nz-residency-code",
                                   :zen.fhir/content :bundled}},
             :uri "https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-code",
