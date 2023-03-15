@@ -4,5 +4,5 @@
          :zen/desc "The reason for the status. Generally only used for inactive resources.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/practitionerRole-status-reason",
-         :zen.fhir/version "0.6.16-3",
+         :zen.fhir/version "0.6.17",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}
