@@ -4,5 +4,5 @@
          :zen/desc "Used to indicate what sort of alias is being used in a Location or Organization - eg that it is a legal name.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/alias-type",
-         :zen.fhir/version "0.6.17-4",
+         :zen.fhir/version "0.6.18-1",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}
