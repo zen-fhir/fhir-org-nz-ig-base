@@ -4,5 +4,5 @@
          :zen/desc "A specific purpose for which this ContactPoint dataType would be used. An example would be to indicate that this ContactPoint is used for video conferencing.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/contactpoint-purpose",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}
