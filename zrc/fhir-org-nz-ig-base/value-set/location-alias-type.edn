@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The complete set of alias types that apply to Locations and Organizations",
-            :zen.fhir/version "0.6.20-2",
+            :zen.fhir/version "0.6.21-2",
             :fhir/code-systems #{{:fhir/url "https://standards.digital.health.nz/ns/alias-type-code",
                                   :zen.fhir/content :bundled}},
             :uri "https://nzhts.digital.health.nz/fhir/ValueSet/alias-type-code",
