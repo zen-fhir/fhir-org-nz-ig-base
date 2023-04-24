@@ -4,5 +4,5 @@
          :zen/desc "The official source of information held about a patient.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/information-source",
-         :zen.fhir/version "0.6.22",
+         :zen.fhir/version "0.6.22-1",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}
