@@ -4,5 +4,5 @@
          :zen/desc "The date the practitioner first became registered with the Responsible Authority or professional body",
          :zen.fhir/type "date",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/registration-initial-date",
-         :zen.fhir/version "0.6.24",
+         :zen.fhir/version "0.6.25-1",
          :confirms #{hl7-fhir-r4-core.date/schema}}}
