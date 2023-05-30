@@ -1,8 +1,10 @@
 {ns fhir-org-nz-ig-base.alias-type,
  import #{zen.fhir hl7-fhir-r4-core.CodeableConcept},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "Used to indicate what sort of alias is being used in a Location or Organization - eg that it is a legal name.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/alias-type",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

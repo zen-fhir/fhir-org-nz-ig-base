@@ -2,10 +2,12 @@
  import #{hl7-fhir-r4-core.Period
           zen.fhir
           hl7-fhir-r4-core.CodeableConcept},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "An indicator of the practicing status of the practitioner as supplied by their Responsible Authority or professional body.",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/registration-status-code",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :type zen/map,
          :keys {:status {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
                 :period {:confirms #{hl7-fhir-r4-core.Period/schema}}}}}
