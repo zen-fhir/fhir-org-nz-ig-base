@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "A coded type for additional authorisations",
-            :zen.fhir/version "0.6.29-4",
+            :zen.fhir/version "0.6.30",
             :fhir/code-systems #{{:fhir/url "https://standards.digital.health.nz/ns/practitioner-additional-authorisation-code",
                                   :zen.fhir/content :bundled}},
             :uri "https://nzhts.digital.health.nz/fhir/ValueSet/practitioner-additional-authorisation-code",
