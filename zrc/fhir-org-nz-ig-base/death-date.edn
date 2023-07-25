@@ -7,7 +7,7 @@
                      zen.fhir/structure-schema},
          :zen/desc "The date of death of the individual, plus the source of that information",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/death-date",
-         :zen.fhir/version "0.6.30",
+         :zen.fhir/version "0.6.30-1",
          :type zen/map,
          :keys {:date {:confirms #{hl7-fhir-r4-core.dateTime/schema},
                        :zen/desc "The date of death"},

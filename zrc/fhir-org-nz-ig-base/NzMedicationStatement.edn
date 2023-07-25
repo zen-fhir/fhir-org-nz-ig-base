@@ -6,7 +6,7 @@
          :zen/desc "MedicationStatement resource for use in NZ",
          :zen.fhir/type "MedicationStatement",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzMedicationStatement",
-         :zen.fhir/version "0.6.30",
+         :zen.fhir/version "0.6.30-1",
          :confirms #{zen.fhir/Resource
                      hl7-fhir-r4-core.MedicationStatement/schema},
          :type zen/map,
