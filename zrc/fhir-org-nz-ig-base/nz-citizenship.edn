@@ -5,7 +5,7 @@
                      zen.fhir/structure-schema},
          :zen/desc "New Zealand citizenship",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship",
-         :zen.fhir/version "0.6.30-1",
+         :zen.fhir/version "0.6.30-7",
          :type zen/map,
          :keys {:status {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
                 :source {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}}}
