@@ -7,7 +7,7 @@
          :zen/desc "HealthcareService resource for use in NZ",
          :zen.fhir/type "HealthcareService",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzHealthcareService",
-         :zen.fhir/version "0.6.30-12",
+         :zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.HealthcareService/schema
                      zen.fhir/Resource},
          :type zen/map,
