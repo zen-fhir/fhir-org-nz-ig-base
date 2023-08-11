@@ -5,7 +5,7 @@
                      zen.fhir/structure-schema},
          :zen/desc "NZ Residency status",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/nz-residency",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :type zen/map,
          :keys {:status {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
                 :source {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}}}
