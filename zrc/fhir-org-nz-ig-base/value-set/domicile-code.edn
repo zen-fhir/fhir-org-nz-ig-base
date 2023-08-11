@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Domicile Code",
-            :zen.fhir/version "0.6.30-7",
+            :zen.fhir/version "0.6.30-10",
             :fhir/code-systems #{{:fhir/url "https://standards.digital.health.nz/ns/domicile-code",
                                   :zen.fhir/content :bundled}},
             :uri "https://nzhts.digital.health.nz/fhir/ValueSet/domicile-code",
