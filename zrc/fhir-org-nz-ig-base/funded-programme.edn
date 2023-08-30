@@ -8,7 +8,7 @@
                      zen.fhir/structure-schema},
          :zen/desc "Funded NZ Healthcare Programmes",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/funded-programme",
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :type zen/map,
          :keys {:fundedProgramme {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
                 :currentAvailability {:confirms #{hl7-fhir-r4-core.boolean/schema}},

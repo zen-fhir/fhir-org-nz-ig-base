@@ -7,7 +7,7 @@
          :zen/desc "Coverage resource for use in NZ (Trial use)",
          :zen.fhir/type "Coverage",
          :zen.fhir/profileUri "http://hl7.org.nz/fhir/StructureDefinition/NzCoverage",
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :confirms #{zen.fhir/Resource
                      hl7-fhir-r4-core.Coverage/schema},
          :type zen/map,
